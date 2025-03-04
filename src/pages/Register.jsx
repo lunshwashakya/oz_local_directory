@@ -101,7 +101,7 @@ function Register() {
 
 
             <div className='flex justify-between '>
-                <Link to="/forgot-password" className='text-blue-600 text-sm '>Forgot Password?</Link>
+                <Link to="/forget-password" className='text-blue-600 text-sm '>Forgot Password?</Link>
                 <Link to="/login" className='text-blue-600 text-sm'>Login</Link>
             </div>
         </>
