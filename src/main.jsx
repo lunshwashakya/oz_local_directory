@@ -15,6 +15,9 @@ import Jobs from './pages/Jobs.jsx';
 import JobsDetails from './pages/JobDetails.jsx';
 import NewJob from './pages/NewJob.jsx';
 import EditJob from './pages/EditJob.jsx';
+import Rooms from './pages/Rooms.jsx';
+import EditRoom from './pages/EditRoom.jsx';
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -35,7 +38,12 @@ createRoot(document.getElementById('root')).render(
         <Route path='jobs/new' element={<NewJob />} />
         <Route path='jobs/:id' element={<JobsDetails />} />
         <Route path='jobs/:id/edit' element={<EditJob />} />
+        <Route path='rooms' element={<Rooms />}/>
+        <Route path='rooms/new' element={<NewJob />} />
+        <Route path='rooms/:id/edit' element={<EditRoom />} />
       </Route>
+
+
       </Routes>
     </BrowserRouter>
   </StrictMode>,

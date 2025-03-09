@@ -52,20 +52,11 @@ function Jobs() {
                                     <Link to={`/jobs/${job.id}/edit`} className="text-sm text-gray-400">Edit</Link>
                                     <button onClick={() => deleteJob(job.id)} className="text-sm  text-red-400">Delete</button>
                                 </div>
-                            </div>
+                        </div>
                         <p onClick={() => navigate(`/jobs/${job.id}`)}>{job.description}</p>
                     </div>
                 ))
             }
-
-
-
-
-
-
-
-
-
         </>
     );
 }
