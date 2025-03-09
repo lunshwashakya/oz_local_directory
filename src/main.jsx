@@ -17,6 +17,8 @@ import NewJob from './pages/NewJob.jsx';
 import EditJob from './pages/EditJob.jsx';
 import Rooms from './pages/Rooms.jsx';
 import EditRoom from './pages/EditRoom.jsx';
+import NewRoom from './pages/NewRoom.jsx';
+import RoomDetails from './pages/RoomDetails.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -39,7 +41,8 @@ createRoot(document.getElementById('root')).render(
         <Route path='jobs/:id' element={<JobsDetails />} />
         <Route path='jobs/:id/edit' element={<EditJob />} />
         <Route path='rooms' element={<Rooms />}/>
-        <Route path='rooms/new' element={<NewJob />} />
+        <Route path='rooms/new' element={<NewRoom />} />
+        <Route path='rooms/:id' element={<RoomDetails />} />
         <Route path='rooms/:id/edit' element={<EditRoom />} />
       </Route>
 

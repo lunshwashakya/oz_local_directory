@@ -1,15 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import schema from "../validationSchemas/room";
-import { useNavigate, useParams } from "react-router";
-import roomsData from "../data/rooms";
+import { useNavigate } from "react-router";
 
-function Editroom() {
+
+function Newroom() {
     const navigate = useNavigate();
-    const params = useParams();
-    const id = params.id;
-    const room = roomsData.find(room =>room.id == id); 
-
     const {
         register,
         handleSubmit,
@@ -17,10 +13,6 @@ function Editroom() {
         formState: { errors },
       } = useForm({
         resolver: yupResolver(schema),
-        defaultValues:{
-            author: room.author,
-            description: room.description
-        }
       });
 
       function onSubmit(data) {
@@ -43,7 +35,7 @@ function Editroom() {
                         {errors.description && (<span className='text-sm text-red-500'>{errors.description.message}</span>)}
                     </div>
 
-                    <input type="submit" value="Update" className="mt-8 w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focusVisible:outline focusVisible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" />
+                    <input type="submit" value="Add" className="mt-8 w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focusVisible:outline focusVisible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" />
                 </div>
             </form>
             <div className='flex justify-items-end '>
@@ -53,4 +45,4 @@ function Editroom() {
     );
 }
 
-export default Editroom;
+export default Newroom;

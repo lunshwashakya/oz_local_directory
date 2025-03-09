@@ -28,7 +28,7 @@ function Rooms() {
 
     function deleteRoom(id) {
         const filteredRooms = allRooms.filter(room => room.id !== id);
-        setAllRooms(filteredRooms);
+        SetAllRooms(filteredRooms);
     }
 
     return(
@@ -52,7 +52,7 @@ function Rooms() {
 
                                 <div  className="flex gap-2">
                                     <Link to={`/rooms/${room.id}/edit`} className="text-sm text-gray-400">Edit</Link>
-                                    <button onClick={() => deleteJob(room.id)} className="text-sm  text-red-400">Delete</button>
+                                    <button onClick={() => deleteRoom(room.id)} className="text-sm  text-red-400">Delete</button>
                                 </div>
                         </div>
                         <p onClick={() => navigate(`/rooms/${room.id}`)}>{room.description}</p>
